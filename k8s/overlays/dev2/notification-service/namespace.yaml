@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: dev2-notification-service
-  labels:
-    environment: dev2
-    service: notification-service

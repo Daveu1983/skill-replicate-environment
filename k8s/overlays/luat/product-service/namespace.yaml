@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: luat-product-service
-  labels:
-    environment: luat
-    service: product-service
