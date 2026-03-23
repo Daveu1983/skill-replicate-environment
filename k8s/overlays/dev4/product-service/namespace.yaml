@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev4-product-service
+  labels:
+    environment: dev4
+    service: product-service

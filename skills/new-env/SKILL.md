@@ -125,14 +125,14 @@ Stop and tell the user if `k8s/overlays/<env-name>/` already exists.
 1. Verify `k8s/overlays/<source-env>/` exists — stop if not
 2. Verify `k8s/overlays/<env-name>/` does not exist — stop if it does
 
-<!-- 3. **Check live image versions** in the cluster for the source environment and compare against its `versions.env`:
+3. **Check live image versions** in the cluster for the source environment and compare against its `versions.env`:
 
 ```bash
 kubectl get deployments --all-namespaces -o custom-columns='NAMESPACE:.metadata.namespace,NAME:.metadata.name,IMAGE:.spec.template.spec.containers[0].image' \
   | grep "^<source-env>-"
 ```
 
-For each service, extract the live image tag (the part after `:` in the IMAGE column). Compare each against the tag in `k8s/overlays/<source-env>/versions.env`. If any live tag differs from the overlay tag, tell the user which services have drifted and use the **live tag** as the authoritative version. -->
+For each service, extract the live image tag (the part after `:` in the IMAGE column). Compare each against the tag in `k8s/overlays/<source-env>/versions.env`. If any live tag differs from the overlay tag, tell the user which services have drifted and use the **live tag** as the authoritative version.
 
 4. Copy and substitute all occurrences of the source env name with the new env name:
 

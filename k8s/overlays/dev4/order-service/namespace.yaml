@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev4-order-service
+  labels:
+    environment: dev4
+    service: order-service
