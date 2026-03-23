@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev3-api-gateway
+  labels:
+    environment: dev3
+    service: api-gateway
