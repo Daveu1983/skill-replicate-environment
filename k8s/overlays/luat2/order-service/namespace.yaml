@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: luat2-order-service
+  labels:
+    environment: luat2
+    service: order-service

@@ -1,0 +1,28 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+namespace: production-product-service
+
+resources:
+  - ../../../base/product-service
+  - namespace.yaml
+
+patches:
+  - patch: |-
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: product-service
+      spec:
+        replicas: 2
+        template:
+          spec:
+            containers:
+              - name: product-service
+                env:
+                  - name: ENV_NAME
+                    value: "production"
+    target:
+      kind: Deployment
+      name: product-service
+

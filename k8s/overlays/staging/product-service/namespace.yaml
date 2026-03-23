@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: staging-product-service
+  labels:
+    environment: staging
+    service: product-service

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sit-notification-service
+  labels:
+    environment: sit
+    service: notification-service

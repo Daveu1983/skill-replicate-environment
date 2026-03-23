@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: production-order-service
+  labels:
+    environment: production
+    service: order-service

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sit-order-service
+  labels:
+    environment: sit
+    service: order-service
